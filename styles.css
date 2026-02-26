@@ -996,6 +996,46 @@ footer p {
   opacity: 0.7;
 }
 
+/* Scroll To Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background: var(--dark2);
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  border-radius: 50%;
+  cursor: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 12px rgba(0, 255, 231, 0.15);
+}
+
+.scroll-top-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  background: var(--accent);
+  color: var(--dark);
+  box-shadow: 0 0 24px rgba(0, 255, 231, 0.4);
+}
+
 @media (max-width: 900px) {
   nav {
     padding: 1.2rem 1.5rem;
